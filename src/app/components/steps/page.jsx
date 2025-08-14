@@ -34,33 +34,72 @@ const Steps = () => {
       image: CvIcon,
     },
   ];
+
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-step relative overflow-hidden py-16 pt-7 gap-20">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-step relative overflow-hidden py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="w-full max-w-4xl text-center pb-5 pt-5 ">
-        <h1 className="text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+      <div className="w-full max-w-7xl text-center pb-8 sm:pb-12 lg:pb-16">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
           كيف يعمل نظام التوظيف الذكي؟
         </h1>
-        <p className="text-xl text-gray-300 leading-relaxed drop-shadow-md max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed drop-shadow-md max-w-4xl mx-auto px-4">
           أربع خطوات بسيطة لتوظيف أفضل المرشحين بكفاءة وسرعة قياسية
         </p>
       </div>
-      {/* Steps & Curve Line */}
-      <div className="relative w-full max-w-7xl px-8 flex flex-col items-center">
-        {/* Steps */}
-        <div className="w-full flex justify-center items-end gap-10 z-10">
-          {data.map((item) => (
-            <Card
-              key={item.id}
-              title={item.title}
-              description={item.desc}
-              image={item.image}
+
+      {/* Steps & Curve Line Container */}
+      <div className="relative w-full max-w-7xl flex flex-col items-center">
+        {/* Desktop Layout (901px+) */}
+        <div className="hidden min-[901px]:block w-full">
+          {/* Steps Row */}
+          <div className="w-full flex justify-center items-end gap-6 xl:gap-10 z-10 relative ">
+            {data.map((item) => (
+              <Card
+                key={item.id}
+                title={item.title}
+                description={item.desc}
+                image={item.image}
+              />
+            ))}
+          </div>
+
+          {/* Curve Line under steps */}
+          <div className="absolute left-0 right-0 top-[-100px] lg:top-[-150px] bottom-0 flex justify-center pointer-events-none z-0">
+            <Image
+              src={CurveLine}
+              alt="Curve Line"
+              className="w-full h-auto max-w-6xl"
+              priority
             />
-          ))}
+          </div>
         </div>
-        {/* Curve Line under steps */}
-        <div className="absolute left-0 right-0 top-[-150px] -bottom-0 flex justify-center pointer-events-none z-0">
-          <Image src={CurveLine} alt="Curve Line" className="w-full h-auto" />
+
+        {/* Mobile and Tablet Layout (0-900px) */}
+        <div className="min-[901px]:hidden w-full">
+          {/* Mobile: 2x2 Grid Layout for Tablets */}
+          <div className="hidden sm:grid sm:min-[901px]:hidden grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto">
+            {data.map((item) => (
+              <div key={item.id} className="flex justify-center">
+                <Card
+                  title={item.title}
+                  description={item.desc}
+                  image={item.image}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: Single Column Layout */}
+          <div className="sm:hidden flex flex-col gap-6 w-full max-w-md mx-auto max-[900px]:items-center">
+            {data.map((item) => (
+              <Card
+                key={item.id}
+                title={item.title}
+                description={item.desc}
+                image={item.image}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

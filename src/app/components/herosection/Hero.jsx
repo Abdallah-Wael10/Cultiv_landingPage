@@ -3,66 +3,148 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import BotIcon from "../../../../public/bot.svg";
-import IconButton from "../../../../public/iconButton.svg"
+import IconButton from "../../../../public/iconButton.svg";
 import Card from "./card";
 import Clients from "../clients/Clients";
 
-
 const Hero = () => {
-
   const data = [
     {
-      title : "شات بوت للتوظيف الذكي، يوظف لك أسرع وبأقل تكلفة",
-      subText  : " صار دافور",
-      sub2Text : 'توظيفك',
-      desc : "بوت التوظيف من Bureau  مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي المقابلات المبدئية، ويرد على المرشحين بسرعة قياسية.",
-      cta : "ارسال ابدا",
-    }
-  ]
+      title: "شات بوت للتوظيف الذكي، يوظف لك أسرع وبأقل تكلفة",
+      subText: " صار دافور",
+      sub2Text: "توظيفك",
+      desc: "بوت التوظيف من Bureau  مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي المقابلات المبدئية، ويرد على المرشحين بسرعة قياسية.",
+      cta: "ارسال ابدا",
+    },
+  ];
 
   const CardsData = [
     {
       text: "استقبال وفرز السير الذاتية",
-      desc : "يقرأ  كل  طلب  جديد  ويختار  الأنسب  تلقائيًا"
+      desc: "يقرأ  كل  طلب  جديد  ويختار  الأنسب  تلقائيًا",
     },
     {
-      text: "استقبال وفرز السير الذاتية",
-      desc : "يقرأ  كل  طلب  جديد  ويختار  الأنسب  تلقائيًا"
-    }
-  ]
+      text: "إجراء المقابلات المبدئية",
+      desc: "يسأل الأسئلة المناسبة ويقيم الإجابات تلقائيًا",
+    },
+  ];
 
- 
   return (
-    <section className="w-full bg-hero h-max flex pt-20 flex-col justify-center items-center flex-wrap">
-         <main className="w-full h-[80%] flex justify-center items-center flex-wrap">
-           <div className="w-1/2 h-full flex flex-col justify-center items-center pl-10  max-[900px]:w-full">
-               <div className="w-full h-max pt-5 ">
-                 <Card text={CardsData[0].text} desc={CardsData[0].desc} />
-               </div>
-               <div className="w-full h-max  flex justify-center items-center ">
-                  <Image src={BotIcon} alt="Bot Icon"  className="" />
-               </div>
-               <div className="w-full h-max pb-20 flex justify-end items-end ">
-                 <Card text={CardsData[1].text} desc={CardsData[1].desc} />
-               </div>
+    <section className="w-full bg-hero min-h-screen flex flex-col justify-center items-center">
+      {/* Main Content */}
+      <main className="w-full flex-1 flex justify-center items-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          {/* Desktop and Tablet Layout */}
+          <div className="hidden md:flex w-full h-full justify-center items-center">
+            {/* Left Side - Bot and Cards */}
+            <div className="w-1/2 h-full flex flex-col justify-center items-center pl-4 lg:pl-10">
+              <div className="w-full h-max pt-5">
+                <Card text={CardsData[0].text} desc={CardsData[0].desc} />
+              </div>
+              <div className="w-full h-max flex justify-center items-center py-8">
+                <Image
+                  src={BotIcon}
+                  alt="Bot Icon"
+                  className="w-auto h-auto max-w-full"
+                  priority
+                />
+              </div>
+              <div className="w-full h-max pb-20 flex justify-end items-end">
+                <Card text={CardsData[1].text} desc={CardsData[1].desc} />
+              </div>
+            </div>
 
-         </div>
-         
-         <div className="w-1/2 h-full  flex flex-col pt-[100px] justify-start items-center pr-10 text-end gap-5 max-[900px]:w-full ">
-               <h1 className="w-full h-max text-[40px] text-white font-medium">{data[0].title}</h1>
-               <h2 className="w-full h-max text-[32px] text-white font-medium"> <span className="text-[#FFD23D]">{data[0].sub2Text}</span> {data[0].subText}</h2>
-               <p className="w-full h-max text-[24px] text-[#DEDEDE] font-light text-right" dir="rtl">{data[0].desc}</p>
-               <div className="w-full h-max pb-5 flex justify-end items-center">
-                    <button className="w-[50%] h-[48px] text-[24px] flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D]">
-                          {data[0].cta}
-                          <Image src={IconButton} alt="Icon Button" width={24} height={24} className="inline ml-2" />
-                      </button>
-               </div>
-         </div>
-         </main>
-         <div className="w-full h-[20%] flex justify-center items-center">
-             {/* <Clients /> */}
-         </div>
+            {/* Right Side - Text Content */}
+            <div className="w-1/2 h-full flex flex-col pt-16 lg:pt-[100px] justify-start items-center pr-4 lg:pr-10 text-end gap-5">
+              <h1 className="w-full h-max text-2xl lg:text-[40px] xl:text-[40px] text-white font-medium leading-tight">
+                {data[0].title}
+              </h1>
+              <h2 className="w-full h-max text-xl lg:text-[32px] xl:text-[32px] text-white font-medium leading-tight">
+                <span className="text-[#FFD23D]">{data[0].sub2Text}</span>{" "}
+                {data[0].subText}
+              </h2>
+              <p
+                className="w-full h-max text-lg lg:text-[24px] xl:text-[24px] text-[#DEDEDE] font-light text-right leading-relaxed"
+                dir="rtl"
+              >
+                {data[0].desc}
+              </p>
+              <div className="w-full h-max pb-5 flex justify-end items-center">
+                <button className="w-full max-w-xs lg:w-[50%] h-12 lg:h-[48px] text-lg lg:text-[24px] flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+                  {data[0].cta}
+                  <Image
+                    src={IconButton}
+                    alt="Icon Button"
+                    width={24}
+                    height={24}
+                    className="inline ml-2"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout (0-900px) */}
+          <div className="md:hidden w-full flex flex-col justify-center items-center py-8 px-4">
+            {/* Text Content First on Mobile */}
+            <div className="w-full flex flex-col justify-center items-center text-center gap-4 mb-8">
+              <h1 className="w-full text-2xl sm:text-3xl text-white font-medium leading-tight">
+                {data[0].title}
+              </h1>
+              <h2 className="w-full text-xl sm:text-2xl text-white font-medium leading-tight">
+                <span className="text-[#FFD23D]">{data[0].sub2Text}</span>{" "}
+                {data[0].subText}
+              </h2>
+              <p
+                className="w-full text-base sm:text-lg text-[#DEDEDE] font-light text-center leading-relaxed px-2"
+                dir="rtl"
+              >
+                {data[0].desc}
+              </p>
+              <div className="w-full flex justify-center items-center mt-4">
+                <button className="w-full max-w-sm h-12 text-lg flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+                  {data[0].cta}
+                  <Image
+                    src={IconButton}
+                    alt="Icon Button"
+                    width={20}
+                    height={20}
+                    className="inline ml-2"
+                  />
+                </button>
+              </div>
+            </div>
+
+            {/* Bot and Cards Section */}
+            <div className="w-full flex flex-col justify-center items-center">
+              {/* First Card */}
+              <div className="w-full max-w-md mb-6">
+                <Card text={CardsData[0].text} desc={CardsData[0].desc} />
+              </div>
+
+              {/* Bot Icon */}
+              <div className="w-full flex justify-center items-center py-6">
+                <Image
+                  src={BotIcon}
+                  alt="Bot Icon"
+                  className="w-auto h-auto max-w-[80%] sm:max-w-[70%]"
+                  priority
+                />
+              </div>
+
+              {/* Second Card */}
+              <div className="w-full max-w-md mt-6">
+                <Card text={CardsData[1].text} desc={CardsData[1].desc} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Clients Section */}
+      <div className="w-full flex justify-center items-center py-8">
+        <Clients />
+      </div>
     </section>
   );
 };

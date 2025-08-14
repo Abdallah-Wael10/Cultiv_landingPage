@@ -4,24 +4,24 @@ import Image from "next/image";
 const Card = ({ title, desc, icon, percentage }) => {
   return (
     <div
-      className="group w-[90%] max-w-lg bg-[#2A2A2A] rounded-[20px] p-6 border border-gray-700/50 
+      className="group w-[90%] max-w-lg bg-[#2A2A2A] rounded-[20px] p-4 sm:p-6 border border-gray-700/50 max-[900px]:w-full
       shadow-2xl shadow-black/20 hover:shadow-[#FFD23D]/20 
       transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2
       hover:bg-[#2E2E2E] hover:border-[#FFD23D]/30"
     >
       {/* الجزء الأول: Icon + Percentage + Title في سطر واحد */}
-      <div className="w-full h-max flex items-center justify-between mb-4">
-        <div className="text-right">
+      <div className="w-full h-max flex items-center justify-between mb-3 sm:mb-4">
+        <div className="text-right flex-1 min-w-0">
           <h1
-            className="text-xl font-bold text-white leading-tight tracking-wide 
+            className="text-base max-[1300px]:text-[15px]   font-bold text-white leading-tight tracking-wide 
             group-hover:text-[#FFD23D] transition-colors duration-500 drop-shadow-lg"
           >
             {title}
           </h1>
         </div>
-        <div className="text-center">
+        <div className="text-center px-2 sm:px-4 flex-shrink-0">
           <span
-            className="text-3xl font-bold text-gray-400 group-hover:text-[#FFD23D] 
+            className="text-2xl sm:text-3xl font-bold text-gray-400 group-hover:text-[#FFD23D] 
             transition-colors duration-500 drop-shadow-lg"
           >
             {percentage}
@@ -34,29 +34,25 @@ const Card = ({ title, desc, icon, percentage }) => {
             opacity-0 group-hover:opacity-70 transition-opacity duration-500"
           ></div>
           <div
-            className="relative w-12 h-12 bg-gradient-to-br from-[#FFD23D] to-[#967509] rounded-full 
+            className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#FFD23D] to-[#967509] rounded-full 
             flex items-center justify-center shadow-lg group-hover:shadow-[#FFD23D]/30 
             transition-shadow duration-500"
           >
             <Image
               src={icon}
               alt={title}
-              width={24}
-              height={24}
-              className="transform group-hover:scale-110 transition-transform duration-500 filter brightness-0 invert"
+              width={20}
+              height={20}
+              className="sm:w-6 sm:h-6 transform group-hover:scale-110 transition-transform duration-500 filter brightness-0 invert"
             />
           </div>
         </div>
-
-        {/* Percentage - الوسط */}
-
-        {/* Title - اليسار */}
       </div>
 
       {/* الجزء التاني: Description لوحدها */}
       <div className="w-full h-max text-right">
         <p
-          className="text-gray-300 text-base leading-relaxed tracking-wide 
+          className="text-gray-300 text-sm sm:text-base leading-relaxed tracking-wide 
           group-hover:text-white transition-colors duration-500 drop-shadow-md"
         >
           {desc}
@@ -66,7 +62,7 @@ const Card = ({ title, desc, icon, percentage }) => {
       {/* Decorative Bottom Line */}
       <div
         className="w-full h-1 bg-gradient-to-r from-transparent via-[#FFD23D]/50 to-transparent 
-        rounded-full mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        rounded-full mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
       ></div>
     </div>
   );
