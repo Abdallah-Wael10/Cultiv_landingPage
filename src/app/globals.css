@@ -39,3 +39,75 @@ body {
   background-size: cover;
   background-position: center;
 }
+.bg-step {
+  background-image: url('../../public/bg2-home.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out 0.5s both;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out 0.8s both;
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 1.2s ease-out 0.3s both;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Sharp button shape */
+.clip-path-polygon {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

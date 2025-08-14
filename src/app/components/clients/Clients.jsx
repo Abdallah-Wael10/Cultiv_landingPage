@@ -8,15 +8,15 @@ import "swiper/css";
 // Client logos
 import DietHubIcon from "../../../../public/clients/diethub.png";
 import FarefocusIcon from "../../../../public/clients/Farefocus.png";
-import FitIcon from "../../../../public/clients/FIT.png";
-import FursanIcon from "../../../../public/clients/Fursan.png";
+import FitIcon from "../../../../public/clients/FIT.svg";
+import FursanIcon from "../../../../public/clients/Fursan.svg";
 import GvIcon from "../../../../public/clients/GV.png";
 import happyLifeIcon from "../../../../public/clients/happyLife.png";
-import IdealSolutionIcon from "../../../../public/clients/IdealSolution.png";
-import ideaspaceIcon from "../../../../public/clients/ideaspace.png";
+import IdealSolutionIcon from "../../../../public/clients/IdealSolution.svg";
+import ideaspaceIcon from "../../../../public/clients/ideaspace.svg";
 import itripIcon from "../../../../public/clients/itrip.png";
 import jiraldurIcon from "../../../../public/clients/jiraldur.png";
-import RoafyIcon from "../../../../public/clients/Roafy.png";
+import RoafyIcon from "../../../../public/clients/Roafy.svg";
 import TMhIcon from "../../../../public/clients/TMH.png";
 import VitrahIcon from "../../../../public/clients/Vitrah.png";
 import WorldGateIcon from "../../../../public/clients/WorldGate.png";
@@ -40,23 +40,16 @@ const icons = [
 
 const Texts = [
   { text: "شركاؤنا في النجاح" },
-  { text: "نفخر بثقة عملائنا من الشركات الرائدة في المنطقة" },
 ];
 
 const Clients = () => {
   return (
-    <section className="w-full bg-white h-max pb-5 pt-5 overflow-hidden relative" dir="rtl">
+    <section className="w-full h-max flex  justify-center items-center gap-2 rounded-2xl p-4     border border-white/10 bg-transparent backdrop-blur-none shadow-none " dir="rtl">
       {/* Grid Background Lines - Same as Hero */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(0,0,0,0.2) 2px, transparent 2px),
-              linear-gradient(to bottom, rgba(0,0,0,0.2) 2px, transparent 2px)
-            `,
-            backgroundSize: "80px 80px",
-          }}
+
         ></div>
 
         {/* Decorative lines - Same style as Hero but with dark colors */}
@@ -68,16 +61,13 @@ const Clients = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Title */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-3">
+          <h2 className="text-[18px] font-normal   text-white mb-3">
             {Texts[0].text}
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            {Texts[1].text}
-          </p>
         </div>
 
         {/* Slider */}
-        <div className="relative">
+        <div className="relative backdrop-blur-sm rounded-full">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={60}
@@ -111,13 +101,13 @@ const Clients = () => {
           >
             {[...icons, ...icons, ...icons].map((icon, index) => (
               <SwiperSlide key={index}>
-                <div className="group flex items-center justify-center  transition-all duration-500">
+                <div className="group flex items-center  justify-center  transition-all duration-500 ">
                   <Image
                     src={icon.src}
                     alt={icon.alt}
                     width={800}
                     height={400}
-                    className="object-contain w-full h-full  opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter drop-shadow-md"
+                    className="object-contain w-full h-full     group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter drop-shadow-md"
                     draggable={false}
                     priority
                     quality={100}
@@ -127,18 +117,9 @@ const Clients = () => {
             ))}
           </Swiper>
 
-          {/* Enhanced fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
-        </div>
+  </div>
 
-        {/* Trust text */}
-        <div className="text-center mt-8">
-          <span className="inline-flex items-center gap-2 text-sm text-gray-500">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            +{icons.length} شركة تثق في خدماتنا
-          </span>
-        </div>
+
       </div>
 
       <style jsx global>{`
