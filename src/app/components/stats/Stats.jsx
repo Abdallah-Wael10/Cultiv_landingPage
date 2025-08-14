@@ -121,7 +121,7 @@ const Stats = () => {
                     className="w-full h-max flex justify-center items-center text-center px-2"
                     dir="rtl"
                   >
-                    <p className="text-sm sm:text-base">
+                    <p className="text-sm sm:text-base text-black">
                       يقرأ كل طلب جديد ويختار الأنسب تلقائيًايقرأ كل طلب جديد
                     </p>
                   </div>
