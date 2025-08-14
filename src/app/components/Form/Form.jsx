@@ -40,7 +40,7 @@ const Form = () => {
                   />
                 </div>
               </div>
-              
+
               {/* Phone */}
               <div className="group">
                 <input
@@ -52,7 +52,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Company */}
               <div className="group">
                 <input
@@ -64,7 +64,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Email */}
               <div className="group">
                 <input
@@ -76,7 +76,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Submit Button */}
               <button
                 type="submit"
@@ -90,7 +90,7 @@ const Form = () => {
               </button>
             </form>
           </div>
-          
+
           {/* Text Section */}
           <div className="w-full max-w-2xl flex-1 flex flex-col justify-center items-center">
             <div className="w-full text-right pt-[130px]" dir="rtl">
@@ -98,7 +98,9 @@ const Form = () => {
                 <span className="text-[#FFC400]">توظيفك</span> صار دافور
               </h2>
               <p className="text-gray-200 text-[28px] font-normal leading-relaxed tracking-wide drop-shadow-md">
-                بوت التوظيف من Bureau مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي مقابلات مع المرشحين ويختار الأنسب منهم.
+                بوت التوظيف من Bureau مدرَّب على أكثر من 1000 سيرة ذاتية من
+                مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي مقابلات
+                مع المرشحين ويختار الأنسب منهم.
               </p>
             </div>
           </div>
@@ -113,7 +115,9 @@ const Form = () => {
                 <span className="text-[#FFC400]">توظيفك</span> صار دافور
               </h2>
               <p className="text-gray-200 text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-wide drop-shadow-md max-w-2xl mx-auto">
-                بوت التوظيف من Bureau مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي مقابلات مع المرشحين ويختار الأنسب منهم.
+                بوت التوظيف من Bureau مدرَّب على أكثر من 1000 سيرة ذاتية من
+                مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي مقابلات
+                مع المرشحين ويختار الأنسب منهم.
               </p>
             </div>
           </div>
@@ -144,7 +148,7 @@ const Form = () => {
                   />
                 </div>
               </div>
-              
+
               {/* Phone */}
               <div className="group">
                 <input
@@ -156,7 +160,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Company */}
               <div className="group">
                 <input
@@ -168,7 +172,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Email */}
               <div className="group">
                 <input
@@ -180,7 +184,7 @@ const Form = () => {
                   dir="rtl"
                 />
               </div>
-              
+
               {/* Submit Button */}
               <button
                 type="submit"

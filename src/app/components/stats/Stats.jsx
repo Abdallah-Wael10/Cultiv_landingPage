@@ -76,7 +76,7 @@ const Stats = () => {
                       className="w-full h-max pt-5 pr-5 flex justify-center items-center text-center"
                       dir="rtl"
                     >
-                      <p>
+                      <p className="text-black ">
                         يقرأ كل طلب جديد ويختار الأنسب تلقائيًايقرأ كل طلب جديد
                       </p>
                     </div>
