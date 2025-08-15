@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="w-full min-h-screen py-8 sm:py-12 flex flex-col justify-center items-center bg-[#181818] px-4 sm:px-6 lg:px-8">
+    <div id="form" className="w-full min-h-screen py-8 sm:py-12 flex flex-col justify-center items-center bg-[#181818] px-4 sm:px-6 lg:px-8">
       {/* Title Section */}
       <div className="w-full max-w-7xl mb-8 sm:mb-12">
         <h1 className="text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-bold tracking-wide drop-shadow-2xl leading-tight">

@@ -77,15 +77,25 @@ const Clients = () => {
               loop={true}
               freeMode={true}
               breakpoints={{
-                // Mobile (0-640px)
+                // Mobile very small (0-480px) - Very small gap
                 0: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // Small tablets (640-768px)
-                640: {
                   slidesPerView: 3,
-                  spaceBetween: 40,
+                  spaceBetween: 5,
+                },
+                // Mobile small (480-640px) - Small gap
+                480: {
+                  slidesPerView: 3,
+                  spaceBetween: 8,
+                },
+                // Mobile medium (640-700px) - Still small gap
+                640: {
+                  slidesPerView: 4,
+                  spaceBetween: 12,
+                },
+                // Mobile to small tablets (700-768px)
+                700: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
                 },
                 // Tablets (768-1024px)
                 768: {
@@ -107,13 +117,13 @@ const Clients = () => {
             >
               {[...icons, ...icons, ...icons].map((icon, index) => (
                 <SwiperSlide key={index}>
-                  <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-500">
+                  <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-500 ">
                     <Image
                       src={icon.src}
                       alt={icon.alt}
                       width={800}
                       height={400}
-                      className="object-contain w-full h-full max-w-[80px] sm:max-w-[100px] lg:max-w-[120px] opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter drop-shadow-md"
+                      className="object-contain w-full h-full max-w-[60px] sm:max-w-[80px] md:max-w-[100px] lg:max-w-[120px] opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter drop-shadow-md"
                       draggable={false}
                       priority
                       quality={100}

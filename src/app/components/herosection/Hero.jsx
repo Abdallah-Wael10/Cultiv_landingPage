@@ -70,7 +70,7 @@ const Hero = () => {
                 {data[0].desc}
               </p>
               <div className="w-full h-max pb-5 flex justify-end items-center">
-                <button className="w-full max-w-xs lg:w-[50%] h-12 lg:h-[48px] text-lg lg:text-[24px] flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+                <a href="#form" className="w-full max-w-xs lg:w-[50%] h-12 lg:h-[48px] text-lg lg:text-[24px] flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
                   {data[0].cta}
                   <Image
                     src={IconButton}
@@ -79,7 +79,7 @@ const Hero = () => {
                     height={24}
                     className="inline ml-2"
                   />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Hero = () => {
                 {data[0].desc}
               </p>
               <div className="w-full flex justify-center items-center mt-4">
-                <button className="w-full max-w-sm h-12 text-lg flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+                <a href="#form" className="w-full max-w-sm h-12 text-lg flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
                   {data[0].cta}
                   <Image
                     src={IconButton}
@@ -111,7 +111,7 @@ const Hero = () => {
                     height={20}
                     className="inline ml-2"
                   />
-                </button>
+                </a>
               </div>
             </div>
 

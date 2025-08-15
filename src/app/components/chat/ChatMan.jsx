@@ -22,7 +22,7 @@ const ChatMan = ({ title, desc, type }) => {
   // Define waveform data based on screen width
   const getWaveformData = () => {
     if (screenWidth < 480) {
-      return [2, 6, 3, 8, 2, 5, 4, 7, 3, 5, 2, 6, 4, 3, 5];
+      return [3, 8, 4, 10, 3, 7, 5, 9, 4, 7, 3, 8, 5, 4, 6, 7, 4, 8, 3, 6]; // More bars for mobile
     } else {
       return [
         2, 6, 3, 8, 2, 5, 4, 7, 3, 5, 2, 6, 4, 3, 5, 5, 4, 7, 3, 5, 2, 6, 4, 3,
@@ -32,9 +32,14 @@ const ChatMan = ({ title, desc, type }) => {
   };
 
   const getMaxHeight = () => {
-    if (screenWidth < 480) return "16px";
-    if (screenWidth < 768) return "20px";
-    return "24px";
+    if (screenWidth < 480) return "28px"; // Increased from 16px
+    if (screenWidth < 768) return "32px"; // Increased from 20px
+    return "36px"; // Increased from 24px
+  };
+
+  const getBarWidth = () => {
+    if (screenWidth < 480) return "w-1"; // Increased from w-0.5
+    return "w-1"; // Keep same for larger screens
   };
 
   return (
@@ -76,11 +81,11 @@ const ChatMan = ({ title, desc, type }) => {
             {/* Check Type: Text or Voice */}
             {type === "voice" ? (
               // Voice Message Container
-              <div className="w-full bg-gray-100 rounded-[15px] xs:rounded-[18px] sm:rounded-[25px] lg:rounded-[30px] px-2 xs:px-3 sm:px-4 lg:px-6 py-2 xs:py-3 sm:py-4 flex items-center gap-1.5 xs:gap-2 sm:gap-4">
+              <div className="w-full bg-gray-100 rounded-[15px] xs:rounded-[18px] sm:rounded-[25px] lg:rounded-[30px] px-3 xs:px-4 sm:px-4 lg:px-6 py-3 xs:py-4 sm:py-4 flex items-center gap-2 xs:gap-3 sm:gap-4">
                 {/* Play Button */}
-                <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#00DEB5] pr-0.5 sm:pr-1 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-600 transition-colors duration-200 flex-shrink-0">
+                <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#00DEB5] pr-0.5 sm:pr-1 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-600 transition-colors duration-200 flex-shrink-0">
                   <svg
-                    className="w-3 h-3 xs:w-4 xs:h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white ml-0.5 sm:ml-1"
+                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white ml-0.5 sm:ml-1"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -89,15 +94,15 @@ const ChatMan = ({ title, desc, type }) => {
                 </div>
 
                 {/* Audio Waveform */}
-                <div className="flex-1 flex items-center justify-center min-w-0 overflow-hidden">
-                  <div className="flex items-center gap-0.5 xs:gap-1 max-w-full">
+                <div className="flex-1 flex items-center justify-center min-w-0 overflow-hidden py-2">
+                  <div className="flex items-center gap-1 xs:gap-1.5 max-w-full">
                     {/* Waveform bars - responsive heights and count */}
                     {getWaveformData().map((height, index) => (
                       <div
                         key={index}
-                        className="w-0.5 xs:w-1 bg-gray-400 rounded-full flex-shrink-0"
+                        className={`${getBarWidth()} bg-gray-500 rounded-full flex-shrink-0 transition-all duration-300 hover:bg-[#00DEB5]`}
                         style={{
-                          height: `${Math.max(height * 1.5, 6)}px`,
+                          height: `${Math.max(height * 2.5, 8)}px`, // Increased multiplier from 1.5 to 2.5
                           maxHeight: getMaxHeight(),
                         }}
                       ></div>
@@ -106,7 +111,7 @@ const ChatMan = ({ title, desc, type }) => {
                 </div>
 
                 {/* Duration */}
-                <div className="text-gray-500 text-xs xs:text-sm sm:text-base lg:text-[18px] font-medium flex-shrink-0">
+                <div className="text-gray-600 text-sm xs:text-base sm:text-base lg:text-[18px] font-semibold flex-shrink-0">
                   1:05
                 </div>
               </div>
