@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Form = () => {
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    const fd = new FormData(e.target);
+    const payload = {
+      firstName: fd.get("firstName") || "",
+      lastName: fd.get("lastName") || "",
+      phone: fd.get("phone") || "",
+      company: fd.get("company") || "",
+      email: fd.get("email") || "",
+    };
+
+    try {
+      const res = await fetch("/api/FormToBitrix", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (res.ok && data.dealId) {
+        toast.success("تم إرسال رسالتك بنجاح! سنتواصل معك في أسرع وقت.");
+        e.target.reset();
+      } else {
+        toast.error("حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى.");
+      }
+    } catch {
+      toast.error("حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى.");
+    }
+    setLoading(false);
+  }
+
   return (
-    <div id="form" className="w-full min-h-screen py-8 sm:py-12 flex flex-col justify-center items-center bg-[#181818] px-4 sm:px-6 lg:px-8">
+    <div
+      id="form"
+      className="w-full min-h-screen py-8 sm:py-12 flex flex-col justify-center items-center bg-[#181818] px-4 sm:px-6 lg:px-8"
+    >
       {/* Title Section */}
       <div className="w-full max-w-7xl mb-8 sm:mb-12">
         <h1 className="text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-bold tracking-wide drop-shadow-2xl leading-tight">
@@ -16,11 +54,15 @@ const Form = () => {
         <div className="hidden min-[901px]:flex justify-center items-start gap-12 px-6">
           {/* Form Section */}
           <div className="w-full max-w-lg flex-1">
-            <form className="w-full bg-[#353535] rounded-[32px] p-10 space-y-8 shadow-2xl shadow-black/30 border border-gray-600/20 backdrop-blur-sm">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full max-w-lg flex-1 bg-[#353535] rounded-[32px] p-10 space-y-8 shadow-2xl shadow-black/30 border border-gray-600/20 backdrop-blur-sm"
+            >
               {/* First row: Names */}
               <div className="flex gap-6">
                 <div className="flex-1 group">
                   <input
+                    name="lastName"
                     type="text"
                     placeholder="الاسم الأخير"
                     className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
@@ -31,6 +73,7 @@ const Form = () => {
                 </div>
                 <div className="flex-1 group">
                   <input
+                    name="firstName"
                     type="text"
                     placeholder="الاسم الأول"
                     className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
@@ -44,6 +87,7 @@ const Form = () => {
               {/* Phone */}
               <div className="group">
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="رقم الهاتف"
                   className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
@@ -56,6 +100,7 @@ const Form = () => {
               {/* Company */}
               <div className="group">
                 <input
+                  name="company"
                   type="text"
                   placeholder="اسم الشركة"
                   className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
@@ -68,6 +113,7 @@ const Form = () => {
               {/* Email */}
               <div className="group">
                 <input
+                  name="email"
                   type="email"
                   placeholder="البريد الإلكتروني"
                   className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
@@ -80,13 +126,14 @@ const Form = () => {
               {/* Submit Button */}
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full h-[68px] rounded-[20px] bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
                 text-white text-[24px] font-bold tracking-wide
                 hover:from-[#ffb800] hover:to-[#FFC400] hover:scale-[1.02] hover:shadow-xl hover:shadow-[#FFC400]/30
                 active:scale-[0.98] transition-all duration-300 ease-out
                 shadow-lg shadow-[#FFC400]/20 border border-[#FFC400]/30"
               >
-                ارسال الطلب
+                {loading ? "جاري الإرسال..." : "ارسال الطلب"}
               </button>
             </form>
           </div>
@@ -129,6 +176,7 @@ const Form = () => {
               <div className="flex flex-col xs:flex-row gap-4 sm:gap-6">
                 <div className="flex-1 group">
                   <input
+                    name="firstName"
                     type="text"
                     placeholder="الاسم الأول"
                     className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-[#353535] border border-gray-600/40 px-4 sm:px-6 text-white text-sm sm:text-base md:text-[18px] font-medium placeholder-gray-400 outline-none
@@ -139,6 +187,7 @@ const Form = () => {
                 </div>
                 <div className="flex-1 group">
                   <input
+                    name="lastName"
                     type="text"
                     placeholder="الاسم الأخير"
                     className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-[#353535] border border-gray-600/40 px-4 sm:px-6 text-white text-sm sm:text-base md:text-[18px] font-medium placeholder-gray-400 outline-none
@@ -152,6 +201,7 @@ const Form = () => {
               {/* Phone */}
               <div className="group">
                 <input
+                  name="phone"
                   type="tel"
                   placeholder="رقم الهاتف"
                   className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-[#353535] border border-gray-600/40 px-4 sm:px-6 text-white text-sm sm:text-base md:text-[18px] font-medium placeholder-gray-400 outline-none
@@ -164,6 +214,7 @@ const Form = () => {
               {/* Company */}
               <div className="group">
                 <input
+                  name="company"
                   type="text"
                   placeholder="اسم الشركة"
                   className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-[#353535] border border-gray-600/40 px-4 sm:px-6 text-white text-sm sm:text-base md:text-[18px] font-medium placeholder-gray-400 outline-none
@@ -176,6 +227,7 @@ const Form = () => {
               {/* Email */}
               <div className="group">
                 <input
+                  name="email"
                   type="email"
                   placeholder="البريد الإلكتروني"
                   className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-[#353535] border border-gray-600/40 px-4 sm:px-6 text-white text-sm sm:text-base md:text-[18px] font-medium placeholder-gray-400 outline-none
@@ -188,13 +240,14 @@ const Form = () => {
               {/* Submit Button */}
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
                 text-white text-lg sm:text-xl md:text-[24px] font-bold tracking-wide
                 hover:from-[#ffb800] hover:to-[#FFC400] hover:scale-[1.02] hover:shadow-xl hover:shadow-[#FFC400]/30
                 active:scale-[0.98] transition-all duration-300 ease-out
                 shadow-lg shadow-[#FFC400]/20 border border-[#FFC400]/30"
               >
-                ارسال الطلب
+                {loading ? "جاري الإرسال..." : "ارسال الطلب"}
               </button>
             </form>
           </div>
