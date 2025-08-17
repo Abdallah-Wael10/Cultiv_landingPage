@@ -48,7 +48,7 @@ const ChatComponent = () => {
           {/* Desktop Layout (901px+) */}
           <div className="hidden min-[901px]:flex w-full justify-center items-start gap-8 xl:gap-12">
             {/* Left Side - ChatMan */}
-            <div className="w-1/2 flex flex-col justify-start items-start gap-8 lg:gap-12">
+            <div className="w-1/2 flex flex-col justify-start items-start  pt-25 gap-32">
               {chatManData.map((chatMan, index) => (
                 <div key={index} className="w-full">
                   <ChatMan
@@ -61,7 +61,7 @@ const ChatComponent = () => {
             </div>
 
             {/* Right Side - ChatBot */}
-            <div className="w-1/2 flex flex-col justify-start items-end gap-8 lg:gap-12">
+            <div className="w-1/2 flex flex-col justify-start items-end gap-[100px] ">
               {chatBotData.map((chatBot, index) => (
                 <div key={index} className="w-full">
                   <ChatBot title={chatBot.title} desc={chatBot.desc} />

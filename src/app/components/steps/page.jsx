@@ -77,7 +77,7 @@ const Steps = () => {
         {/* Mobile and Tablet Layout (0-900px) */}
         <div className="min-[901px]:hidden w-full">
           {/* Mobile: 2x2 Grid Layout for Tablets */}
-          <div className="hidden sm:grid sm:min-[901px]:hidden grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto">
+          <div className="max-[600px]:hidden w-full h-max pb-5 items-center justify-center max-[900px]:flex max-[900px]:flex-col-reverse">
             {data.map((item) => (
               <div key={item.id} className="flex justify-center">
                 <Card
@@ -90,7 +90,7 @@ const Steps = () => {
           </div>
 
           {/* Mobile: Single Column Layout */}
-          <div className="sm:hidden flex flex-col gap-6 w-full max-w-md mx-auto max-[900px]:items-center">
+          <div className="sm:hidden flex flex-col max-[500px]:flex-col-reverse gap-6 w-full max-w-md mx-auto max-[900px]:items-center">
             {data.map((item) => (
               <Card
                 key={item.id}
