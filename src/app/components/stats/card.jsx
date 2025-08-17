@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card = ({ title, desc, icon, percentage }) => {
   return (
     <div
-      className="group w-[90%] max-w-lg bg-[#2A2A2A] rounded-[20px] p-4 sm:p-6 border border-gray-700/50 max-[900px]:w-full
+      className="group w-[90%] max-w-lg bg-[#2A2A2A] rounded-[20px] p-4 sm:p-6 border border-gray-700/50 max-[900px]:w-[95%]
       shadow-2xl shadow-black/20 hover:shadow-[#FFD23D]/20 
       transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2
       hover:bg-[#2E2E2E] hover:border-[#FFD23D]/30"
