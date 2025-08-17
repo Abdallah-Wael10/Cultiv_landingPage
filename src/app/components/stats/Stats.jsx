@@ -105,7 +105,7 @@ const Stats = () => {
                       className="text-center text-black font-extrabold text-base sm:text-lg md:text-[20px]"
                       dir="rtl"
                     >
-                      استقبال وفرز السير الذاتية
+                        نتايج أتمتة عملية التوظيف
                     </h1>
                     <Image
                       src={BlackBot}
@@ -118,7 +118,7 @@ const Stats = () => {
                     dir="rtl"
                   >
                     <p className="text-sm sm:text-base text-black">
-                      يقرأ كل طلب جديد ويختار الأنسب تلقائيًايقرأ كل طلب جديد
+                        تأثير بوت Bureau على إدارة التنمية البشرية
                     </p>
                   </div>
                 </div>
