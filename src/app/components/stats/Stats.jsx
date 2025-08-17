@@ -39,15 +39,11 @@ const Stats = () => {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg"
           dir="rtl"
         >
-          كيف يعمل نظام التوظيف الذكي؟
+          نتائج حقيقية لعملائنا
         </h1>
-        <p
-          className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed drop-shadow-md max-w-2xl mx-auto px-4"
-          dir="rtl"
-        >
-          بوت التوظيف من Bureau مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و
-          مستويات خبرات مختلف يفرز السير الذاتية ، يسوي
-        </p>
+                  <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
+
+
       </div>
 
       {/* Main Content */}
@@ -68,7 +64,7 @@ const Stats = () => {
                         className="h-max pt-2 text-black font-extrabold text-[20px]"
                         dir="rtl"
                       >
-                        استقبال وفرز السير الذاتية
+                        نتايج أتمتة عملية التوظيف
                       </h1>
                       <Image src={BlackBot} alt="Black Bot" />
                     </div>
@@ -77,7 +73,7 @@ const Stats = () => {
                       dir="rtl"
                     >
                       <p className="text-black ">
-                        يقرأ كل طلب جديد ويختار الأنسب تلقائيًايقرأ كل طلب جديد
+                        تأثير بوت Bureau على إدارة التنمية البشرية
                       </p>
                     </div>
                   </div>

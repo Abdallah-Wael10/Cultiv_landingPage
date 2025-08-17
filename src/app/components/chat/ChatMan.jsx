@@ -74,7 +74,7 @@ const ChatMan = ({ title, desc, type }) => {
           px-3 xs:px-4 sm:px-6 lg:px-8 py-3 xs:py-4 sm:py-6
           shadow-2xl shadow-black/10 border border-gray-100
           transition-all duration-500 ease-out flex flex-col justify-center
-          hover:shadow-2xl hover:shadow-black/15"
+          hover:shadow-2xl hover:shadow-black/15 max-[1100px]:w-[75%]" 
         >
           {/* Content */}
           <div className="relative z-10 text-right space-y-1.5 xs:space-y-2 sm:space-y-3">
@@ -94,7 +94,7 @@ const ChatMan = ({ title, desc, type }) => {
                 </div>
 
                 {/* Audio Waveform */}
-                <div className="flex-1 flex items-center justify-center min-w-0 overflow-hidden py-2">
+                <div className="flex-1 flex items-center justify-center min-w-0 overflow-hidden py-2  ">
                   <div className="flex items-center gap-1 xs:gap-1.5 max-w-full">
                     {/* Waveform bars - responsive heights and count */}
                     {getWaveformData().map((height, index) => (

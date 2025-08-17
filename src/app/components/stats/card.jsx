@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card = ({ title, desc, icon, percentage }) => {
   return (
     <div
-      className="group w-[90%] max-w-lg bg-[#2A2A2A] rounded-[20px] p-4 sm:p-6 border border-gray-700/50 max-[900px]:w-[95%]
+      className="group w-[90%] max-w-lg bg-[#2A2A2A]  p-4 sm:p-6 border border-gray-700/50 max-[900px]:w-[95%]
       shadow-2xl shadow-black/20 hover:shadow-[#FFD23D]/20 
       transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2
       hover:bg-[#2E2E2E] hover:border-[#FFD23D]/30"
@@ -34,7 +34,7 @@ const Card = ({ title, desc, icon, percentage }) => {
             opacity-0 group-hover:opacity-70 transition-opacity duration-500"
           ></div>
           <div
-            className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#FFD23D] to-[#967509] rounded-full 
+            className="relative w-10 h-10 sm:w-12 sm:h-12  border border-[#FFD23D] rounded-full 
             flex items-center justify-center shadow-lg group-hover:shadow-[#FFD23D]/30 
             transition-shadow duration-500"
           >

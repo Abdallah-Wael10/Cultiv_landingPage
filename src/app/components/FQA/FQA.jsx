@@ -7,16 +7,24 @@ const FQA = () => {
   // FQA arabic saudi about بوت التوظيف من Bureau (rtl)
   const DataFQA = [
     {
-      question: "ما هو بوت التوظيف من Bureau؟",
-      answer: "بوت التوظيف من Bureau هو أداة ذكية تستخدم الذكاء الاصطناعي لمساعدة الشركات في عملية التوظيف. يقوم بفرز السير الذاتية وإجراء مقابلات أولية مع المرشحين بشكل آلي، مما يوفر الوقت والجهد على فرق الموارد البشرية."
+      question: "وش هو شات بوت التوظيف؟",
+      answer: "بوت يستخدم الذكاء الاصطناعي عشان يوظف الناس من أول فرز السير الذاتية لين يرد على المتقدمين."
     },
     {
-      question: "كيف يعمل بوت التوظيف؟",
-      answer: "يعمل بوت التوظيف عن طريق تحليل السير الذاتية باستخدام تقنيات الذكاء الاصطناعي، ثم يقوم بإجراء مقابلات آلية مع المرشحين عبر المحادثة النصية أو الصوتية. يقيم البوت المهارات والخبرات ويصنف المرشحين حسب مدى ملاءمتهم للوظيفة المطلوبة."
+      question: "كيف يوفر الوقت والتكلفة؟",
+      answer: "البوت يسوي شغل فريق كامل بدقايق، ويقلل التكلفة ٣١٪ ويختصر مدة التوظيف ٦٦٪"
     },
     {
-      question: "ما هي فوائد استخدام بوت التوظيف؟",
-      answer: "توفير الوقت والجهد بنسبة تصل إلى 66%، تحسين دقة اختيار المرشحين بنسبة 31%، وتقليل التكاليف المرتبطة بعملية التوظيف. كما يوفر تقييماً موضوعياً ومتسقاً لجميع المرشحين دون تحيز."
+      question: "يدعم السعودة؟",
+      answer: "ايه. يطابق السعوديين مع متطلبات نطاقات ويضمن الالتزام بسرعة"
+    },
+    {
+      question: "يناسب المرشحين السعوديين؟",
+      answer: "البوت يدعم العربي والانجليزي ويعطي تجربة احترافية وسهلة للمتقدمين"
+    },
+    {
+      question: "لازم أعرف برمجة؟",
+      answer: "لا. الحل جاهز ويركب على أنظمة الموارد البشرية عندك."
     },
 
   ];
@@ -37,7 +45,7 @@ const FQA = () => {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#FFD23D] to-[#967509] rounded-full mb-6 shadow-2xl shadow-[#FFD23D]/30">
+          <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-lg bg-transparent border border-[#FFD23D] rounded-full mb-6  shadow-[#FFD23D]/30">
             <HelpCircle className="w-8 h-8 text-white" />
           </div>
           
@@ -46,7 +54,7 @@ const FQA = () => {
           </h1>
           
           <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
-            إجابات على أكثر الأسئلة شيوعاً حول بوت التوظيف من Bureau
+            إجابات على أكثر الأسئلة انتشاراً عن بوت التوظيف من Bureau
           </p>
           
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
@@ -57,7 +65,7 @@ const FQA = () => {
           {DataFQA.map((item, index) => (
             <div
               key={index}
-              className="group bg-[#2a2a2a]/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden
+              className="group bg-[#2a2a2a]/80 backdrop-blur-sm border border-gray-700/50  overflow-hidden
               hover:border-[#FFD23D]/30 hover:bg-[#2d2d2d]/90 transition-all duration-500 ease-out
               hover:shadow-2xl hover:shadow-[#FFD23D]/10 hover:-translate-y-1"
             >
@@ -107,17 +115,17 @@ const FQA = () => {
         {/* Contact Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-[#2a2a2a]/50 to-[#353535]/50 backdrop-blur-sm border border-gray-700/30 
-            rounded-2xl p-8 lg:p-10 hover:border-[#FFD23D]/30 transition-all duration-500">
+             p-8 lg:p-10 hover:border-[#FFD23D]/30 transition-all duration-500">
             <h3 className="text-xl lg:text-2xl font-bold text-white mb-4">
               لم تجد إجابة لسؤالك؟
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               تواصل معنا للحصول على إجابات مفصلة حول بوت التوظيف
             </p>
-            <a href="#form" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#FFD23D] to-[#967509] 
-              text-white font-semibold rounded-xl hover:from-[#967509] hover:to-[#FFD23D] 
+            <a href="#form" className="inline-flex items-center px-8 py-4 bg-transparent backdrop-blur-lg border border-white 
+              text-white font-semibold  
               transform hover:scale-105 hover:shadow-xl hover:shadow-[#FFD23D]/30
-              transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-[#FFD23D]/50">
+              transition-all duration-300 ease-out focus:outline-none focus:ring-2  hover:border-[#FFD23D]">
               <MessageCircle className="w-5 h-5 ml-2" />
               تواصل معنا
             </a>

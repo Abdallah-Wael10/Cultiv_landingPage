@@ -12,7 +12,7 @@ const Steps = () => {
     {
       id: 1,
       title: "ترشيح المؤهلين للمقابلة الثانية",
-      desc: "ينظم المقابلات النهائية للمرشحين المقبولين",
+      desc: "ينظم المقابلات النهائية المتقدمين المقبولين",
       image: HandByHandIcon,
     },
     {
@@ -24,13 +24,13 @@ const Steps = () => {
     {
       id: 3,
       title: "مقابلة مبدئية آلية بناءً على معاييرك",
-      desc: "يصمم أسئلة للمقابلة تتناسب مع معايير الوظيفة وخبرة المرشحين",
+      desc: "يصمم أسئلة للمقابلة تتناسب مع معايير الوظيفة وخبرة المتقدمين ",
       image: InterViewIcon,
     },
     {
       id: 4,
       title: "فرز السير الذاتية",
-      desc: "يحلل سير المرشحين الذاتية حسب مهام ومتطلبات كل وظيفة",
+      desc: "يحلل سير المتقدمين الذاتية حسب مهام ومتطلبات كل وظيفة",
       image: CvIcon,
     },
   ];
@@ -40,11 +40,13 @@ const Steps = () => {
       {/* Header */}
       <div className="w-full max-w-7xl text-center pb-8 sm:pb-12 lg:pb-16">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
-          كيف يعمل نظام التوظيف الذكي؟
+          كيف يعمل بوت التوظيف الذكي؟
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed drop-shadow-md max-w-4xl mx-auto px-4">
           أربع خطوات بسيطة لتوظيف أفضل المرشحين بكفاءة وسرعة قياسية
         </p>
+                  <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
+
       </div>
 
       {/* Steps & Curve Line Container */}

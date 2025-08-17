@@ -38,7 +38,7 @@ const icons = [
   { src: WorldGateIcon, alt: "WorldGate" },
 ];
 
-const Texts = [{ text: "شركاؤنا في النجاح" }];
+const Texts = [{ text: "شركانا في النجاح" }];
 
 const Clients = () => {
   return (
@@ -58,9 +58,11 @@ const Clients = () => {
         <div className="w-full relative z-10">
           {/* Title */}
           <div className="text-center mb-6 lg:mb-10">
-            <h2 className="text-base sm:text-lg lg:text-[18px] font-normal text-white mb-3">
+            <h2 className="text-base sm:text-lg lg:text-[28px] font-extrabold text-white mb-3">
               {Texts[0].text}
             </h2>
+                      <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
+
           </div>
 
           {/* Slider */}

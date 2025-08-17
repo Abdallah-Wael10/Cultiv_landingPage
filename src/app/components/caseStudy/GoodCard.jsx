@@ -6,7 +6,7 @@ import CheckIcon from "../../../../public/Check.svg";
 const GoodCard = ({ title, text1, text2, text3, text4 }) => {
   return (
     <div
-      className="group w-full max-w-[600px] mx-auto bg-[#353535] rounded-[20px] p-6 sm:p-8 
+      className="group w-full max-w-[600px] mx-auto bg-[#353535]  p-6 sm:p-8 
       shadow-2xl shadow-green-500/20 hover:shadow-green-500/40 
       transition-all duration-500 ease-out  
       hover:bg-[#383838] border border-gray-600/30 hover:border-[#FFD23D]/30"
@@ -49,7 +49,7 @@ const GoodCard = ({ title, text1, text2, text3, text4 }) => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {/* Feature 1 */}
         <div
-          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-[#FFD23D]/30"
         >
           <div className="relative flex-shrink-0">
@@ -75,7 +75,7 @@ const GoodCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 2 */}
         <div
-          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-[#FFD23D]/30"
         >
           <div className="relative flex-shrink-0">
@@ -101,7 +101,7 @@ const GoodCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 3 */}
         <div
-          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-[#FFD23D]/30"
         >
           <div className="relative flex-shrink-0">
@@ -127,7 +127,7 @@ const GoodCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 4 */}
         <div
-          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-3 sm:gap-4 p-3 sm:p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-[#FFD23D]/30"
         >
           <div className="relative flex-shrink-0">

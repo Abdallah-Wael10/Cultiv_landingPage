@@ -10,22 +10,20 @@ import Clients from "../clients/Clients";
 const Hero = () => {
   const data = [
     {
-      title: "شات بوت للتوظيف الذكي، يوظف لك أسرع وبأقل تكلفة",
-      subText: " صار دافور",
-      sub2Text: "توظيفك",
+      title: "أسرع توظيف بالذكاء الاصطناعي",
+      subText: " بوت ذكي يفرز السير الذاتية، يسوي  المقابلات المبدئية، ويقلل وقت التوظيف",
+      sub2Text: " %  66",
       desc: "بوت التوظيف من Bureau  مدرَّب على أكثر من 1000 سيرة ذاتية من مجالات و مستويات خبرات مختلف يفرز السير الذاتية ، يسوي المقابلات المبدئية، ويرد على المرشحين بسرعة قياسية.",
-      cta: "ارسال ابدا",
+      cta: " جرّب البوت الحين",
     },
   ];
 
   const CardsData = [
     {
-      text: "استقبال وفرز السير الذاتية",
-      desc: "يقرأ  كل  طلب  جديد  ويختار  الأنسب  تلقائيًا",
+      text: "فرز تلقائي + مقابلات أولية ذكية",
     },
     {
-      text: "إجراء المقابلات المبدئية",
-      desc: "يسأل الأسئلة المناسبة ويقيم الإجابات تلقائيًا",
+      text: "ردود آلية للمتقدمين",
     },
   ];
 
@@ -39,7 +37,7 @@ const Hero = () => {
             {/* Left Side - Bot and Cards */}
             <div className="w-1/2 h-full flex flex-col justify-center items-center pl-4 lg:pl-10">
               <div className="w-full h-max pt-5">
-                <Card text={CardsData[0].text} desc={CardsData[0].desc} />
+                <Card text={CardsData[0].text}  />
               </div>
               <div className="w-full h-max flex justify-center items-center py-8">
                 <Image
@@ -50,7 +48,7 @@ const Hero = () => {
                 />
               </div>
               <div className="w-full h-max pb-20 flex justify-end items-end">
-                <Card text={CardsData[1].text} desc={CardsData[1].desc} />
+                <Card text={CardsData[1].text}  />
               </div>
             </div>
 
@@ -60,17 +58,12 @@ const Hero = () => {
                 {data[0].title}
               </h1>
               <h2 className="w-full h-max text-xl lg:text-[32px] xl:text-[32px] text-white font-medium leading-tight">
-                <span className="text-[#FFD23D]">{data[0].sub2Text}</span>{" "}
                 {data[0].subText}
+                <span className="text-[#FFD23D] font-bold">{data[0].sub2Text}</span>
               </h2>
-              <p
-                className="w-full h-max text-lg lg:text-[24px] xl:text-[24px] text-[#DEDEDE] font-light text-right leading-relaxed"
-                dir="rtl"
-              >
-                {data[0].desc}
-              </p>
-              <div className="w-full h-max pb-5 flex justify-end items-center">
-                <a href="#form" className="w-full max-w-xs lg:w-[50%] h-12 lg:h-[48px] text-lg lg:text-[24px] flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+
+              <div className="w-full h-max pb-5 pt-5 flex justify-end items-center">
+                <a href="#form" className="w-full max-w-xs lg:w-[80%] h-12 lg:h-[48px] text-lg lg:text-[24px] flex justify-center items-center font-bold text-white backdrop-blur-lg bg-transparent border border-white hover:shadow-[#FFC400] hover:border-[#FFC400] shadow-sm hover:scale-105 transition-transform duration-300">
                   {data[0].cta}
                   <Image
                     src={IconButton}
@@ -95,14 +88,9 @@ const Hero = () => {
                 <span className="text-[#FFD23D]">{data[0].sub2Text}</span>{" "}
                 {data[0].subText}
               </h2>
-              <p
-                className="w-full text-base sm:text-lg text-[#DEDEDE] font-light text-center leading-relaxed px-2"
-                dir="rtl"
-              >
-                {data[0].desc}
-              </p>
+
               <div className="w-full flex justify-center items-center mt-4">
-                <a href="#form" className="w-full max-w-sm h-12 text-lg flex justify-center items-center font-bold text-white bg-gradient-to-r from-[#967509] to-[#FFD23D] rounded-lg hover:scale-105 transition-transform duration-300">
+                <a href="#form" className="w-full max-w-sm h-12 text-lg flex justify-center items-center font-bold text-white bg-transparent backdrop-blur-lg border-white border hover:border-[#FFC400] rounded-lg hover:scale-105 transition-transform duration-300">
                   {data[0].cta}
                   <Image
                     src={IconButton}

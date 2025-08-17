@@ -6,7 +6,7 @@ import CheckIcon from "../../../../public/badCheck.svg";
 const BadCard = ({ title, text1, text2, text3, text4 }) => {
   return (
     <div
-      className="group w-full max-w-[600px] bg-[#353535] rounded-[20px] p-8 
+      className="group w-full max-w-[600px] bg-[#353535]  p-8 
       shadow-2xl shadow-red-500/20 hover:shadow-red-500/40 
       transition-all duration-500 ease-out  
       hover:bg-[#383838] border border-gray-600/30 hover:border-red-500/30"
@@ -49,7 +49,7 @@ const BadCard = ({ title, text1, text2, text3, text4 }) => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Feature 1 */}
         <div
-          className="flex flex-row-reverse items-center gap-2 p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-2 p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-red-500/30"
         >
           <div className="relative flex-shrink-0">
@@ -75,7 +75,7 @@ const BadCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 2 */}
         <div
-          className="flex flex-row-reverse items-center gap-2 p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-2 p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-red-500/30"
         >
           <div className="relative flex-shrink-0">
@@ -101,7 +101,7 @@ const BadCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 3 */}
         <div
-          className="flex flex-row-reverse items-center gap-2 p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-2 p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-red-500/30"
         >
           <div className="relative flex-shrink-0">
@@ -127,7 +127,7 @@ const BadCard = ({ title, text1, text2, text3, text4 }) => {
 
         {/* Feature 4 */}
         <div
-          className="flex flex-row-reverse items-center gap-2 p-4 rounded-lg bg-black/20 hover:bg-black/30 
+          className="flex flex-row-reverse items-center gap-2 p-4  bg-black/20 hover:bg-black/30 
           transition-all duration-300 group/item border border-gray-600/20 hover:border-red-500/30"
         >
           <div className="relative flex-shrink-0">

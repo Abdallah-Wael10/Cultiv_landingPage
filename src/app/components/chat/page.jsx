@@ -35,12 +35,12 @@ const ChatComponent = () => {
       <main className="w-full max-w-7xl mx-auto rounded-lg backdrop-blur-lg border border-white/10 bg-transparent shadow-none transition-all duration-300">
         {/* Header Section */}
         <div className="w-full px-4 sm:px-6 lg:px-8 py-8 text-white">
-          <h1 className="w-full text-3xl sm:text-4xl lg:text-[48px] font-medium text-center mb-4 leading-tight">
-            text
+          <h1 className="w-full text-3xl pb-5 sm:text-4xl lg:text-[48px] font-medium text-center mb-4 leading-tight">
+            كيف يسوي البوت المقابلات الأولية؟
           </h1>
-          <p className="w-full text-base sm:text-lg lg:text-xl text-center leading-relaxed max-w-4xl mx-auto">
-            text text text texttext text
-          </p>
+                    <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
+
+
         </div>
 
         {/* Chat Container */}
