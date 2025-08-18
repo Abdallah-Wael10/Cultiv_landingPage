@@ -82,7 +82,7 @@ const FormComponent = () => {
             >
               {({ isSubmitting }) => (
                 <Form
-                  className="w-full max-w-lg flex-1 bg-[#353535] rounded-[32px] p-10 space-y-8 shadow-2xl shadow-black/30 border border-gray-600/20 backdrop-blur-sm"
+                  className="w-full max-w-lg flex-1 bg-[#353535] rounded-none p-10 space-y-8 shadow-2xl shadow-black/30 border border-gray-600/20 backdrop-blur-sm"
                   dir="rtl"
                 >
                   <div className="flex gap-6">
@@ -91,7 +91,7 @@ const FormComponent = () => {
                         name="lastName"
                         type="text"
                         placeholder="الاسم الأخير"
-                        className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
+                        className="w-full h-[68px] rounded-none bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
                         focus:border-[#FFC400] focus:bg-gray-800/70 focus:shadow-lg focus:shadow-[#FFC400]/20 
                         transition-all duration-300 ease-out hover:border-gray-500/60"
                         dir="rtl"
@@ -109,7 +109,7 @@ const FormComponent = () => {
                         name="firstName"
                         type="text"
                         placeholder="الاسم الأول"
-                        className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
+                        className="w-full h-[68px] rounded-none bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
                         focus:border-[#FFC400] focus:bg-gray-800/70 focus:shadow-lg focus:shadow-[#FFC400]/20 
                         transition-all duration-300 ease-out hover:border-gray-500/60"
                         dir="rtl"
@@ -128,7 +128,7 @@ const FormComponent = () => {
                       name="phone"
                       type="tel"
                       placeholder="رقم الهاتف"
-                      className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
+                      className="w-full h-[68px] rounded-none bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
                       focus:border-[#FFC400] focus:bg-gray-800/70 focus:shadow-lg focus:shadow-[#FFC400]/20 
                       transition-all duration-300 ease-out hover:border-gray-500/60"
                       dir="rtl"
@@ -146,7 +146,7 @@ const FormComponent = () => {
                       name="company"
                       type="text"
                       placeholder="اسم الشركة"
-                      className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
+                      className="w-full h-[68px] rounded-none bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
                       focus:border-[#FFC400] focus:bg-gray-800/70 focus:shadow-lg focus:shadow-[#FFC400]/20 
                       transition-all duration-300 ease-out hover:border-gray-500/60"
                       dir="rtl"
@@ -164,7 +164,7 @@ const FormComponent = () => {
                       name="email"
                       type="email"
                       placeholder="البريد الإلكتروني"
-                      className="w-full h-[68px] rounded-[20px] bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
+                      className="w-full h-[68px] rounded-none bg-[#353535] border border-gray-600/40 px-6 text-white text-[18px] font-medium placeholder-gray-400 outline-none
                       focus:border-[#FFC400] focus:bg-gray-800/70 focus:shadow-lg focus:shadow-[#FFC400]/20 
                       transition-all duration-300 ease-out hover:border-gray-500/60"
                       dir="rtl"
@@ -180,7 +180,7 @@ const FormComponent = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-[68px] rounded-[20px] bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
+                    className="w-full h-[68px] rounded-none bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
                     text-white text-[24px] font-bold tracking-wide
                     hover:from-[#ffb800] hover:to-[#FFC400] hover:scale-[1.02] hover:shadow-xl hover:shadow-[#FFC400]/30
                     active:scale-[0.98] transition-all duration-300 ease-out
@@ -347,7 +347,7 @@ const FormComponent = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-12 sm:h-14 md:h-[68px] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
+                    className="w-full h-12 sm:h-14 md:h-[68px]   bg-gradient-to-r from-[#FFC400] to-[#ffb800] 
                     text-white text-lg sm:text-xl md:text-[24px] font-bold tracking-wide
                     hover:from-[#ffb800] hover:to-[#FFC400] hover:scale-[1.02] hover:shadow-xl hover:shadow-[#FFC400]/30
                     active:scale-[0.98] transition-all duration-300 ease-out

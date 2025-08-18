@@ -8,7 +8,7 @@ const CaseStudy = () => {
       {/* Header */}
       <div className="w-full max-w-4xl text-center pb-8 sm:pb-12 lg:pb-16">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] text-white font-medium leading-tight drop-shadow-lg">
-          و  التوظيف التقليدي  Bureau الفرق بين بوت
+                الفرق بين بوت التوظيف و البوت التقليدي
         </h1>
                   <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#FFD23D] to-transparent mx-auto mt-6 rounded-full"></div>
 
@@ -39,7 +39,7 @@ const CaseStudy = () => {
         {/* Mobile and Tablet Layout (0-900px) */}
         <div className="min-[901px]:hidden flex flex-col gap-8 sm:gap-10 max-[900px]:items-center">
           <GoodCard
-            title="شات بوت Bureau"
+            title=" شات بوت Bureau"
             text1="24/7 تواصل فوري مع المرشحين"
             text2="أتمتة كاملة للمهام الروتينية "
             text3="مقابلات المئات خلال دقائق"

@@ -11,8 +11,8 @@ const Card = ({ text, desc }) => {
           {text}
         </h3>
         <div
-          className="w-[27px] h-[27px] flex items-center justify-center bg-white/10 
-          backdrop-blur-none rounded-full border border-white/20 shadow-none"
+          className="w-[27px] h-[27px] flex items-center justify-center bg-transparent backdrop-blur-lg border border-[#FFD23D] 
+           rounded-full  shadow-none"
         >
           {/* أيقونة أو محتوى جوه الدائرة */}
         </div>

@@ -35,7 +35,7 @@ const GoodCard = ({ title, text1, text2, text3, text4 }) => {
           className="text-white text-lg sm:text-xl font-bold text-center leading-tight tracking-wide
           group-hover:text-green-300 transition-colors duration-500 drop-shadow-lg"
         >
-          شات بوت Bureau
+        Bureau  شات بوت 
         </h2>
 
         {/* Decorative Line under title */}
