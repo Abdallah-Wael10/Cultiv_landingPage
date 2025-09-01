@@ -10,6 +10,7 @@ import CaseStudy from "./components/caseStudy/CaseStudy";
 import Form from "./components/Form/Form";
 import Loading from "./components/loading/loading";
 import FQA from "./components/FQA/FQA";
+import CaseStudy2 from "./components/caseStudy2/CaseStudy";
 export default function Home() {
   // i need to make function to render loading state for 2 sec before retrun landing page
   const [loading, setLoading] = useState(true);
@@ -30,9 +31,10 @@ export default function Home() {
     <div className="w-full h-max bg-[#1A1A1A]">
       <NavBar />
       <Hero />
-      <ChatComponent />
       <Steps />
+      <ChatComponent />
       <Stats />
+      <CaseStudy2 />
       <CaseStudy />
       <FQA />
       <Form />

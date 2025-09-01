@@ -1,5 +1,5 @@
 import React from "react";
-import BotIcon from "../../../../public/bot.svg";
+import BotIcon from "../../../../public/nobot.svg";
 import Image from "next/image";
 import CheckIcon from "../../../../public/badCheck.svg";
 
