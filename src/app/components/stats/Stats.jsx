@@ -59,43 +59,43 @@ const Stats = () => {
                 {/* Dropdown Card */}
                 <div
                   className={`group bg-black/20 backdrop-blur-sm border border-gray-700/50 rounded-lg overflow-hidden
-                  hover:border-white transition-all duration-700 ease-in-out
-                  hover:shadow-2xl hover:shadow-[#FFD23D]/10 hover:-translate-y-1 hover:scale-[1.02]
-                  ${openIndex === index ? 'border-white/40 shadow-lg shadow-white/10 scale-[1.01]' : ''}`}
+                  hover:border-white transition-all duration-300 ease-out will-change-transform
+                  lg:hover:shadow-2xl lg:hover:shadow-[#FFD23D]/10 lg:hover:-translate-y-1 lg:hover:scale-[1.02]
+                  ${openIndex === index ? 'border-white/40 shadow-lg shadow-white/10 lg:scale-[1.01]' : ''}`}
                 >
                   {/* Question Header */}
                   <button
                     onClick={() => toggleAccordion(index)}
                     className="w-full px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8 text-right gap-10 max-[700px]:gap-[10px] flex items-center justify-between
                     focus:outline-none focus:ring-2 focus:ring-white focus:ring-inset
-                    transition-all duration-500 ease-in-out"
+                    transition-all duration-300 ease-out"
                   >
                     <div className="flex-1 ml-3 sm:ml-4">
                       <h3 className={`text-base sm:text-lg lg:text-xl font-semibold leading-tight
-                        transition-all duration-500 ease-in-out
-                        ${openIndex === index ? 'text-white scale-[1.02]' : 'text-white group-hover:text-white'}`}>
+                        transition-all duration-300 ease-out
+                        ${openIndex === index ? 'text-white lg:scale-[1.02]' : 'text-white group-hover:text-white'}`}>
                         {item.title}
                       </h3>
                     </div>
                     
                     <div className="flex-shrink-0">
                       <div className={`w-8 h-7 sm:w-10 sm:h-8 lg:w-[43px] lg:h-[36px] ml-2 bg-white rounded-[30px] lg:rounded-[44px] 
-                        flex items-center justify-center transition-all duration-500 ease-in-out
-                        group-hover:bg-white group-hover:shadow-lg group-hover:scale-110
-                        ${openIndex === index ? 'rotate-180 bg-white shadow-lg scale-110' : ''}`}>
-                        <ArrowDown className={`w-4 h-4 lg:w-5 lg:h-5 transition-all duration-500 ease-in-out
+                        flex items-center justify-center transition-all duration-300 ease-out will-change-transform
+                        lg:group-hover:bg-white lg:group-hover:shadow-lg lg:group-hover:scale-110
+                        ${openIndex === index ? 'rotate-180 bg-white lg:shadow-lg lg:scale-110' : ''}`}>
+                        <ArrowDown className={`w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 ease-out
                           ${openIndex === index ? 'text-black' : 'text-black group-hover:text-black'}`} />
                       </div>
                     </div>
                   </button>
 
                   {/* Answer Content */}
-                  <div className={`overflow-hidden transition-all duration-700 ease-in-out
+                  <div className={`overflow-hidden transition-all duration-300 ease-out
                     ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="px-4 pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8">
-                      <div className="w-full h-px bg-black/20 backdrop-blur-lg mb-4 sm:mb-6 transform transition-all duration-500 ease-in-out"></div>
+                      <div className="w-full h-px bg-black/20 backdrop-blur-lg mb-4 sm:mb-6 transition-opacity duration-300 ease-out"></div>
                       <p className={`text-white leading-relaxed text-xs sm:text-sm lg:text-[13px] font-normal 
-                        transition-all duration-500 ease-in-out transform
+                        transition-all duration-300 ease-out
                         ${openIndex === index ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'}`}>
                         {item.desc}
                       </p>
@@ -103,8 +103,8 @@ const Stats = () => {
                   </div>
 
                   {/* Bottom Glow Effect */}
-                  <div className={`h-1 bg-white transition-all duration-700 ease-in-out
-                    ${openIndex === index ? 'opacity-100 shadow-lg shadow-white/50' : 'opacity-0'}`}></div>
+                  <div className={`h-1 bg-white transition-opacity duration-300 ease-out
+                    ${openIndex === index ? 'opacity-100 lg:shadow-lg lg:shadow-white/50' : 'opacity-0'}`}></div>
                 </div>
 
                 {/* Mobile/Tablet Image - Shows directly under each dropdown when open */}
@@ -112,16 +112,16 @@ const Stats = () => {
                   {openIndex === index && (
                     <div className="mt-4 flex justify-center">
                       <div className="w-full max-w-sm h-auto p-4 sm:p-5 rounded-[20px] flex justify-center items-center bg-[#1D1D1D] 
-                                    transition-all duration-700 ease-in-out hover:shadow-2xl hover:shadow-white/10">
-                        <div className="transition-all duration-700 ease-in-out transform">
+                                    transition-opacity duration-300 ease-out">
+                        <div className="transition-transform duration-300 ease-out">
                           <Image
                             src={Data[openIndex].icon}
                             alt={Data[openIndex].title}
                             className="object-contain w-full h-auto max-h-[200px] sm:max-h-[250px]
-                                     transition-all duration-700 ease-in-out transform 
-                                     hover:scale-105 animate-in fade-in zoom-in"
+                                     transition-transform duration-300 ease-out"
                             priority
                             key={`mobile-${openIndex}`}
+                            loading="eager"
                           />
                         </div>
                       </div>
@@ -136,14 +136,14 @@ const Stats = () => {
         {/* Desktop Right Section - Image Display (hidden on mobile/tablet) */}
         <div className="hidden lg:flex w-1/2 h-max pt-5 pb-5 justify-center items-center">
           <div className="w-max h-max p-5 rounded-[20px] flex justify-center items-center bg-[#1D1D1D] 
-                        transition-all duration-700 ease-in-out hover:shadow-2xl hover:shadow-white/10">
+                        transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-white/10">
             {openIndex !== null && (
-              <div className="transition-all duration-700 ease-in-out transform">
+              <div className="transition-all duration-500 ease-out transform">
                 <Image
                   src={Data[openIndex].icon}
                   alt={Data[openIndex].title}
-                  className="object-contain transition-all duration-700 ease-in-out transform 
-                           hover:scale-105 animate-in fade-in zoom-in"
+                  className="object-contain transition-all duration-500 ease-out transform 
+                           hover:scale-105"
                   priority
                   key={`desktop-${openIndex}`}
                 />
